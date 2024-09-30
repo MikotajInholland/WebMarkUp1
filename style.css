@@ -1,71 +1,68 @@
-/* General styling */
+* {
+ margin: 0px;
+ padding: 0px;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    padding: 1rem 0;
-    text-align: center;
+    display:flex;
+    background-color: aqua;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #333;
+nav {
+    display:flex;
+background-color: red;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;  /* Removes underline */
+button {
     padding: 10px 20px;
-    background-color: #444;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for hover */
+    cursor: pointer;
 }
 
-/* Override default link styles */
-nav ul li a:link,
-nav ul li a:visited {
-    color: white;  /* Ensures the same color for unvisited and visited links */
-    background-color: #444;
+button:hover {
+    background-color: #45a049;
 }
 
-nav ul li a:hover {
-    background-color: #555;  /* Changes background color on hover */
-    color: #fff;  /* Keeps text white on hover */
+.logo {
+    width: 100%; 
+    max-width: 60px; 
+    height: auto; 
+    margin-right: 10px;
 }
 
-/* If you want the color to change more */
-nav ul li a:active {
-    background-color: #666;  /* Even darker when the link is active */
-}
-
-main {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-section.intro img {
+.background {
     width: 100%;
-    height: auto;
+    opacity: 0.7;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    display: flex;
+    margin: 20px;
 }
+
+.main-nav > * {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+
+  .main-nav > :last-child {
+    margin-right: 0;
+  }
+
+  .main-nav button {
+    transition: background-color 0.3s ease;
+  }
+
+  .main-nav .home-button {
+    margin-right: auto;
+  }
