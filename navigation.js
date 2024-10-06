@@ -1,10 +1,10 @@
 
   const buttons = document.querySelectorAll('.main-nav button');
 
-  buttons.forEach(function(button) {  // Step 1: forEach opened
-    button.addEventListener('click', function(event) {  // Step 2: addEventListener opened
+  buttons.forEach(function(button) {  
+    button.addEventListener('click', function(event) {  
       const buttonText = event.target.textContent;
-      switch (buttonText) {  // Step 3: switch opened
+      switch (buttonText) {  
         case 'Home':
           window.location.href = './index.html';
           break;
@@ -24,7 +24,7 @@
          window.location.href = './contact.html';
           break;
         default:
-          console.log('No case found for this button.');
+          console.log('How did you manage to not click a button?');
           break;
       }  
     });  
