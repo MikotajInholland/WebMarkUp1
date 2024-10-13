@@ -5,29 +5,28 @@
 
 body {
     font-family: Arial, sans-serif;
-    padding-top: 84.4px;
 }
 
 header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #2F2F2F;
     color: #D3D3D3;
-    position: fixed;
-    height: auto;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 1000;
+    padding: 0;
 }
 
 nav {
     display: flex;
     background-color: #2F2F2F;
-    position: fixed;
-    top: 42.2px;
-    left: 0;
-    right: 0;
+    position: sticky;
+    top: 60px; 
     z-index: 999;
+    margin: 0; 
+    padding: 0;
 }
 
 main {
@@ -58,15 +57,15 @@ main article {
 }
 
 button {
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 10px 20px; /* Consistent padding for buttons */
+    margin: 0 5px; /* Equal margin on sides */
     font-size: 16px;
+    height: 40px; /* Set a fixed height */
     background-color: #0F5AC8;
     color: #DDDDDD;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    position: relative;
     transition: background-color 0.3s ease;
 }
 
@@ -83,8 +82,9 @@ button:hover {
 
 .main-nav > * {
     display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
 }
 
 .main-nav > :last-child {
@@ -172,7 +172,7 @@ ul.social-links li {
 }
 
 ul.social-links li a {
-    color: #fff;
+    color: #0F5AC8;
     text-decoration: none;
 }
 
