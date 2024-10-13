@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -75,11 +75,6 @@ button:hover {
     margin-right: 10px;
 }
 
-footer {
-    display: flex;
-    margin: 20px;
-}
-
 .main-nav > * {
     display: flex;
     justify-content: space-between;
@@ -143,5 +138,118 @@ footer {
     }
     to {
         opacity: 1;
+    }
+}
+
+footer.footer {
+    background-color: #2F2F2F;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    clear: both;
+    width: 100%;
+    bottom: 0;
+}
+
+ul.social-links {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: inline-block; 
+}
+
+ul.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+ul.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.social-links li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    main article {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    footer.footer {
+        font-size: 14px;
+    }
+
+    ul.social-links {
+        display: block;
+    }
+
+    ul.social-links li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    main article {
+        padding: 15px;
+    }
+
+    button {
+        width: 48%;
+    }
+
+    footer.footer {
+        font-size: 16px;
+    }
+
+    ul.social-links li {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 901px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    main article {
+        padding: 20px;
+    }
+
+    button {
+        width: auto;
+    }
+
+    footer.footer {
+        font-size: 16px;
     }
 }
