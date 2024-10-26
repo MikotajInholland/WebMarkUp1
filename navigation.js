@@ -11,7 +11,7 @@
         case 'Essential Components ▼':
           window.location.href = './essential-components.html';
           break;
-        case 'Comparing Components ▼':
+        case 'Comparing Components':
           window.location.href = './comparing-components.html';
           break;
         case 'Assembling the Computer ▼':
@@ -20,7 +20,7 @@
         case 'Troubleshooting ▼':
           window.location.href = './troubleshooting.html';
           break;
-        case 'Contact and FAQs ▼':
+        case 'Contact and FAQs':
          window.location.href = './contact.html';
           break;
         default:

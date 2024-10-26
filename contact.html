@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Us - TheBuildHub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo.png" type="image/png">
-
+    <meta name="description" content="Contact TheBuildHub for any inquiries or support.">
+    <meta name="keywords" content="Contact, TheBuildHub, Support, Inquiries">
+    <meta name="author" content="Your Name">
     <script>
         function confirmSubmission() {
             alert("Your question has been submitted. Thank you!");
-        return false;
+            return false; // Prevent form submission for demonstration
         }
 
         function clearPlaceholder(input) {
@@ -24,15 +26,14 @@
                 input.value = input.defaultValue;
             }
         }
-        </script>
+    </script>
 </head>
 <body>
     <header>
-        <img class="logo" src="img/logo.png" alt="This is a logo">
+        <img class="logo" src="img/logo.png" alt="TheBuildHub Logo" title="TheBuildHub">
         <h1>TheBuildHub</h1>
         <nav class="main-nav">
             <button class="home-button">Home</button>
-    
             <span class="dropdown">
                 <button>Essential Components ▼</button>
                 <ul class="dropdown-content">
@@ -45,17 +46,7 @@
                     <a href="essential-components.html#case">Computer Case</a>
                 </ul>
             </span>
-    
-            <span class="dropdown">
-                <button>Comparing Components ▼</button>
-                <ul class="dropdown-content">
-                    <a href="#">CPUs</a>
-                    <a href="#">GPUs</a>
-                    <a href="#">Motherboards</a>
-                    <a href="#">RAM</a>
-                </ul>
-            </span>
-    
+            <button>Comparing Components</button>
             <span class="dropdown">
                 <button>Assembling the Computer ▼</button>
                 <ul class="dropdown-content">
@@ -65,57 +56,64 @@
                     <a href="#">Step 4: Cabling</a>
                 </ul>
             </span>
-    
             <span class="dropdown">
                 <button>Troubleshooting ▼</button>
                 <ul class="dropdown-content">
-                    <a href="#">Common Errors</a>
-                    <a href="#">BIOS Issues</a>
-                    <a href="#">Boot Failures</a>
-                    <a href="#">No Display</a>
+                    <li><a href="#">Common Errors</a></li>
+                    <li><a href="#">BIOS Issues</a></li>
+                    <li><a href="#">Boot Failures</a></li>
+                    <li><a href="#">No Display</a></li>
                 </ul>
             </span>
-    
-            <span class="dropdown">
-                <button>Contact and FAQs ▼</button>
-                <ul class="dropdown-content">
-                    <a href="#">Contact Us</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Live Chat</a>
-                    <a href="#">Support Forum</a>
-                </ul>
-            </span>
+
+                <button>Contact and FAQs</button>
+
         </nav>
-    
     </header>
     <main>
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+            </a>
+        </p>
         <h1>Contact Us</h1>
-        <p><span style="color: red;">*</span> Fields marked with a star are mandatory.</p>
+        <p><span style="color: #FF0000;">*</span> Fields marked with a star are mandatory.</p>
         <form onsubmit="return confirmSubmission()">
-            <label for="salutation">Salutation <span style="color: red;">*</span></label>
+            <label for="salutation">Salutation <span style="color: #FF0000;">*</span></label>
             <select id="salutation" required>
                 <option value="" disabled selected>Select your option</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
-    
-            <label for="fullname">Full Name <span style="color: red;">*</span></label>
+
+            <label for="fullname">Full Name <span style="color: #FF0000;">*</span></label>
             <input type="text" id="fullname" value="e.g. John Doe" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>
-    
-            <label for="email">Email Address <span style="color: red;">*</span></label>
+
+            <label for="email">Email Address <span style="color: #FF0000;">*</span></label>
             <input type="email" id="email" value="e.g. john@example.com" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>
-    
+
             <label for="phone">Phone Number (optional)</label>
             <input type="tel" id="phone" value="e.g. +1234567890" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
-    
-            <label for="question">Your Question <span style="color: red;">*</span></label>
+
+            <label for="question">Your Question <span style="color: #FF0000;">*</span></label>
             <textarea id="question" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>e.g. What is your return policy?</textarea>
-    
+
             <button type="submit">Submit</button>
         </form>
     </main>
-    
+    <footer class="footer">
+        <p>&copy; 2024 TheBuildHub. All rights reserved.</p>
+        <p>Contact us: <a href="contact.html">The Contact Page</a></p>
+        
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+     </footer>
     <script src="navigation.js"></script>
     <script src="//code.tidio.co/nolgj3oldaze0wiutufx2xntzrphsplj.js" async></script>
 </body>

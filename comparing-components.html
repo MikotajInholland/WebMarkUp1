@@ -26,16 +26,7 @@
                     <a href="essential-components.html#case">Computer Case</a>
                 </ul>
             </span>
-    
-            <span class="dropdown">
-                <button>Comparing Components ▼</button>
-                <ul class="dropdown-content">
-                    <a href="#">CPUs</a>
-                    <a href="#">GPUs</a>
-                    <a href="#">Motherboards</a>
-                    <a href="#">RAM</a>
-                </ul>
-            </span>
+                <button>Comparing Components</button>
     
             <span class="dropdown">
                 <button>Assembling the Computer ▼</button>
@@ -57,22 +48,169 @@
                 </ul>
             </span>
     
-            <span class="dropdown">
-                <button>Contact and FAQs ▼</button>
-                <ul class="dropdown-content">
-                    <a href="#">Contact Us</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Live Chat</a>
-                    <a href="#">Support Forum</a>
-                </ul>
-            </span>
+                <button>Contact and FAQs</button>
         </nav>
     
     </header>
     <main>
-        <h1>Comparing</h1>
+        <section class="container">
+            <h1>Search for a Component</h1>
+            <label for="componentSearch">Enter the component name:</label>
+            <input type="text" id="componentSearch" placeholder="e.g., Intel Core i5-10400F" onkeyup="suggestComponents()">
+            <ul id="suggestions"></ul> 
+            
+            <button onclick="searchComponent()">Search</button>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Component Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Performance</th>
+                        <th>Rating</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                </tbody>
+            </table>
+        </section>
+        
     </main>
+    <footer class="footer">
+        <p>&copy; 2024 TheBuildHub. All rights reserved.</p>
+        <p>Contact us: <a href="contact.html">The Contact Page</a></p>
+        
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+     </footer>
     <script src="navigation.js"></script>
     <script src="//code.tidio.co/nolgj3oldaze0wiutufx2xntzrphsplj.js" async></script>
+    <script>
+        const componentsData = [
+    { name: 'AMD Ryzen 9 5900X', type: 'CPU', price: '$450', performance: 'High', rating: '4.8/5', pcpartpickerLink: 'https://pcpartpicker.com/product/KwLwrH/amd-ryzen-9-5900x-37-ghz-12-core-processor-100-100000061wof' },
+    { name: 'Intel Core i9-11900K', type: 'CPU', price: '$500', performance: 'High', rating: '4.7/5', pcpartpickerLink: 'https://pcpartpicker.com/product/mDcG3C/intel-core-i9-11900k-35-ghz-8-core-processor-bx8070811900k' },
+    { name: 'AMD Ryzen 5 5600X', type: 'CPU', price: '$299', performance: 'Good', rating: '4.6/5', pcpartpickerLink: 'https://pcpartpicker.com/product/g94BD3/amd-ryzen-5-5600x-37-ghz-6-core-processor-100-100000065box' },
+    { name: 'Intel Core i7-10700K', type: 'CPU', price: '$400', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/yhxbt6/intel-core-i7-10700k-38-ghz-8-core-processor-bx8070110700k' },
+    { name: 'Nvidia GeForce RTX 3080', type: 'GPU', price: '$1,200', performance: 'Extreme', rating: '4.9/5', pcpartpickerLink: 'https://pcpartpicker.com/product/RnDkcf/nvidia-geforce-rtx-3080-10-gb-founders-edition-video-card-9001g1332530000' },
+    { name: 'Nvidia GeForce RTX 3070', type: 'GPU', price: '$800', performance: 'High', rating: '4.7/5', pcpartpickerLink: 'https://pcpartpicker.com/product/m8pmP6/nvidia-geforce-rtx-3070-8-gb-founders-edition-video-card-9001g1422510000' },
+    { name: 'AMD Radeon RX 6800 XT', type: 'GPU', price: '$1,000', performance: 'High', rating: '4.6/5', pcpartpickerLink: 'https://pcpartpicker.com/product/m8Tp99/amd-radeon-rx-6800-xt-16-gb-video-card-100-438370' },
+    { name: 'Nvidia GeForce GTX 1660 Super', type: 'GPU', price: '$250', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/YC848d/msi-geforce-gtx-1660-super-6-gb-gaming-x-video-card-gtx-1660-super-gaming-x' },
+    { name: 'Corsair Vengeance RGB Pro 16GB (2 x 8GB)', type: 'RAM', price: '$90', performance: 'Good', rating: '4.8/5', pcpartpickerLink: 'https://pcpartpicker.com/product/QDhKHx/corsair-vengeance-rgb-pro-16gb-2-x-8gb-ddr4-3200-memory-cmw16gx4m2c3200c16' },
+    { name: 'G.Skill Trident Z RGB 32GB (2 x 16GB)', type: 'RAM', price: '$180', performance: 'High', rating: '4.9/5', pcpartpickerLink: 'https://pcpartpicker.com/product/jxH8TW/gskill-trident-z-rgb-32-gb-2-x-16-gb-ddr4-3600-memory-f4-3600c16d-32gtzrc' },
+    { name: 'Samsung 980 Pro 1TB NVMe SSD', type: 'Storage', price: '$150', performance: 'Extreme', rating: '4.9/5', pcpartpickerLink: 'https://pcpartpicker.com/product/DDWBD3/samsung-980-pro-1-tb-m2-2280-nvme-solid-state-drive-mz-v8p1t0bam' },
+    { name: 'Western Digital Blue 1TB HDD', type: 'Storage', price: '$50', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/MwW9TW/western-digital-internal-hard-drive-wd10ezex' },
+    { name: 'MSI MPG Z490 Gaming Edge', type: 'Motherboard', price: '$200', performance: 'High', rating: '4.6/5', pcpartpickerLink: 'https://pcpartpicker.com/product/ZJ2bt6/msi-mpg-z490-gaming-edge-wifi-atx-lga1200-motherboard-mpg-z490-gaming-edge-wifi' },
+    { name: 'ASUS ROG Strix B550-F Gaming', type: 'Motherboard', price: '$180', performance: 'High', rating: '4.7/5', pcpartpickerLink: 'https://pcpartpicker.com/product/JXBhP6/asus-rog-strix-b550-f-gaming-atx-am4-motherboard-rog-strix-b550-f-gaming' },
+    { name: 'Gigabyte A520M DS3H', type: 'Motherboard', price: '$80', performance: 'Good', rating: '4.4/5', pcpartpickerLink: 'https://pcpartpicker.com/product/rxfxFT/gigabyte-a520m-ds3h-v2-micro-atx-am4-motherboard-a520m-ds3h-v2' },
+    { name: 'Intel Core i5-10600K', type: 'CPU', price: '$300', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/HcPgXL/intel-core-i5-10600k-41-ghz-6-core-processor-bx8070110600k' },
+    { name: 'AMD Ryzen 7 5800X', type: 'CPU', price: '$450', performance: 'High', rating: '4.8/5', pcpartpickerLink: 'https://pcpartpicker.com/product/qtvqqs/amd-ryzen-7-5800x-38-ghz-8-core-processor-100-100000063wof' },
+    { name: 'Crucial Ballistix 16GB (2 x 8GB)', type: 'RAM', price: '$80', performance: 'Good', rating: '4.6/5', pcpartpickerLink: 'https://pcpartpicker.com/product/BxTzK8/crucial-ballistix-16-gb-2-x-8-gb-ddr4-3200-memory-bl2k8g32c16u4b' },
+    { name: 'Kingston A2000 500GB NVMe SSD', type: 'Storage', price: '$60', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/RykgXL/kingston-a2000-500-gb-m2-2280-nvme-solid-state-drive-sa2000m8500g' },
+    { name: 'Seagate Barracuda 2TB HDD', type: 'Storage', price: '$60', performance: 'Good', rating: '4.4/5', pcpartpickerLink: 'https://pcpartpicker.com/product/mwrYcf/seagate-barracuda-computer-2-tb-35-7200rpm-internal-hard-drive-st2000dm008' },
+    
+
+];
+// Adding comments to this complicated bit of code so I won't forget how it works for when(not if) it breaks.
+function suggestComponents() {
+    // Retrieve the value entered in the component search input field, converting it to lowercase for case-insensitive matching
+    const searchQuery = document.getElementById('componentSearch').value.toLowerCase();
+    
+    // Get the HTML element where suggestions will be displayed
+    const suggestionsList = document.getElementById('suggestions');
+    
+    // Clear any previous suggestions from the suggestions list
+    suggestionsList.innerHTML = ''; 
+    
+    // Only proceed if there is a search query
+    if (searchQuery) {
+        // Filter the componentsData array to find components whose names include the search query
+        const filteredComponents = componentsData.filter(component =>
+            component.name.toLowerCase().includes(searchQuery)
+        );
+
+        // For each matching component, create a list item in the suggestions list
+        filteredComponents.forEach(component => {
+            const suggestionItem = document.createElement('li'); // Create a new list item element
+            suggestionItem.textContent = component.name;         // Set the text of the list item to the component's name
+            suggestionItem.style.cursor = 'pointer';             // Change cursor to pointer to indicate clickability
+            
+            // When a suggestion is clicked, populate the search input with the selected name and clear suggestions
+            suggestionItem.onclick = () => {
+                document.getElementById('componentSearch').value = component.name;
+                suggestionsList.innerHTML = '';
+            };
+
+            // Add the suggestion item to the suggestions list
+            suggestionsList.appendChild(suggestionItem);
+        });
+    }
+}
+
+function searchComponent() {
+    // Retrieve the search query entered in the component search input field, in lowercase
+    const searchQuery = document.getElementById('componentSearch').value.toLowerCase();
+    
+    // Get the table body where the search result will be displayed and clear any previous results
+    const resultsBody = document.getElementById('resultsBody');
+    resultsBody.innerHTML = ''; 
+
+    // Find the first component in componentsData that matches the search query
+    const matchedComponent = componentsData.find(component =>
+        component.name.toLowerCase().includes(searchQuery)
+    );
+
+    // If a matching component is found, create a table row displaying its details
+    if (matchedComponent) {
+        const row = document.createElement('tr');  // Create a new table row element
+
+        // Create and populate table cells for each property of the matched component
+        const nameCell = document.createElement('td');
+        nameCell.textContent = matchedComponent.name;
+        row.appendChild(nameCell);
+
+        const typeCell = document.createElement('td');
+        typeCell.textContent = matchedComponent.type;
+        row.appendChild(typeCell);
+
+        const priceCell = document.createElement('td');
+        priceCell.textContent = matchedComponent.price;
+        row.appendChild(priceCell);
+
+        const performanceCell = document.createElement('td');
+        performanceCell.textContent = matchedComponent.performance;
+        row.appendChild(performanceCell);
+
+        const ratingCell = document.createElement('td');
+        ratingCell.textContent = matchedComponent.rating;
+        row.appendChild(ratingCell);
+
+        // Create a cell with a link to view the component on PCPartPicker
+        const linkCell = document.createElement('td');
+        const link = document.createElement('a');
+        link.href = matchedComponent.pcpartpickerLink;
+        link.target = "_blank";             // Open link in a new tab
+        link.textContent = "View on PCPartPicker"; // Set link text
+        linkCell.appendChild(link);
+        row.appendChild(linkCell);
+
+        // Add the completed row to the results table body
+        resultsBody.appendChild(row);
+
+    } else {
+        // If no matching component is found, display a "No matching component found" message
+        const row = document.createElement('tr');
+        const noResultCell = document.createElement('td');
+        noResultCell.colSpan = 6; // Span across all columns
+        noResultCell.textContent = 'No matching component found.';
+        row.appendChild(noResultCell);
+        resultsBody.appendChild(row);
+    }
+}
+
+    </script>
 </body>
 </html>
