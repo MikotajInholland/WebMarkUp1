@@ -9,24 +9,7 @@
     <meta name="description" content="Contact TheBuildHub for any inquiries or support.">
     <meta name="keywords" content="Contact, TheBuildHub, Support, Inquiries">
     <meta name="author" content="Your Name">
-    <script>
-        function confirmSubmission() {
-            alert("Your question has been submitted. Thank you!");
-            return false; // Prevent form submission for demonstration
-        }
-
-        function clearPlaceholder(input) {
-            if (input.value === input.defaultValue) {
-                input.value = '';
-            }
-        }
-
-        function restorePlaceholder(input) {
-            if (input.value === '') {
-                input.value = input.defaultValue;
-            }
-        }
-    </script>
+    
 </head>
 <body>
     <header>
@@ -79,30 +62,31 @@
             </a>
         </p>
         <h1>Contact Us</h1>
-        <p><span style="color: #FF0000;">*</span> Fields marked with a star are mandatory.</p>
-        <form onsubmit="return confirmSubmission()">
-            <label for="salutation">Salutation <span style="color: #FF0000;">*</span></label>
-            <select id="salutation" required>
-                <option value="" disabled selected>Select your option</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+    <p><span class="required">*</span> Fields marked with a star are mandatory.</p>
 
-            <label for="fullname">Full Name <span style="color: #FF0000;">*</span></label>
-            <input type="text" id="fullname" value="e.g. John Doe" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>
+    <form onsubmit="return confirmSubmission()">
+        <label for="salutation">Salutation <span class="required">*</span></label>
+        <select id="salutation" required>
+            <option value="" disabled selected>Select your option</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
 
-            <label for="email">Email Address <span style="color: #FF0000;">*</span></label>
-            <input type="email" id="email" value="e.g. john@example.com" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>
+        <label for="fullname">Full Name <span class="required">*</span></label>
+        <input type="text" id="fullname" placeholder="e.g. John Doe" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>
 
-            <label for="phone">Phone Number (optional)</label>
-            <input type="tel" id="phone" value="e.g. +1234567890" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" placeholder="e.g. john@example.com" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>
 
-            <label for="question">Your Question <span style="color: #FF0000;">*</span></label>
-            <textarea id="question" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required>e.g. What is your return policy?</textarea>
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" id="phone" placeholder="e.g. +1234567890" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
 
-            <button type="submit">Submit</button>
-        </form>
+        <label for="question">Your Question <span class="required">*</span></label>
+        <textarea id="question" placeholder="e.g. What is your return policy?" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
     </main>
     <footer class="footer">
         <p>&copy; 2024 TheBuildHub. All rights reserved.</p>
@@ -116,5 +100,23 @@
      </footer>
     <script src="navigation.js"></script>
     <script src="//code.tidio.co/nolgj3oldaze0wiutufx2xntzrphsplj.js" async></script>
+    <script>
+        function confirmSubmission() {
+            alert("Your question has been submitted. Thank you!");
+            return false; // Prevent form submission for demonstration
+        }
+
+        function clearPlaceholder(input) {
+            if (input.value === input.defaultValue) {
+                input.value = '';
+            }
+        }
+
+        function restorePlaceholder(input) {
+            if (input.value === '') {
+                input.value = input.defaultValue;
+            }
+        }
+    </script>
 </body>
 </html>
