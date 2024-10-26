@@ -153,7 +153,7 @@ header aside.title {
     margin-right: 0;
     color: #D3D3D3;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 2em;
 }
 
 /* Dropdown menu */
@@ -346,7 +346,6 @@ table tr:hover {
     padding: 0;
 }
 
-/* Responsiveness and Typography */
 @media (min-width: 48em) and (max-width: 119.9375em) {
     body {
         font-size: 1em;
@@ -369,7 +368,7 @@ table tr:hover {
     }
 }
 
-/* Small Screens (Mobile Devices) */
+
 @media (max-width: 47.9375em) {
     body {
         font-size: 0.9375em;
@@ -400,3 +399,47 @@ table tr:hover {
         padding: 0.75em;
     }
 }
+
+#cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 90%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  #cookie-popup.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #cookie-popup p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  #cookie-popup button {
+    background-color: #0F5AC8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  #cookie-popup button:hover {
+    background-color: #1874CD;
+  }
