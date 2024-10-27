@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to TheBuildHub</title>
-    <link rel="icon" href="img/logo.png" type="image/png" alt="This is a favicon">
+    <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -114,29 +114,34 @@
         </ul>
      </footer>
      
-    
+     <span id="cookie-popup">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <button onclick="acceptCookies()">Accept</button>
+    </span>
+
+    <script>
+        function showCookiePopup() {
+            const popup = document.getElementById("cookie-popup");
+            if (!localStorage.getItem("cookiesAccepted")) {
+                popup.classList.add("show");
+                console.log(Cookies)
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem("cookiesAccepted", "true");
+            document.getElementById("cookie-popup").classList.remove("show");
+        }
+
+        window.onload = showCookiePopup;
+        window.onload = function() {
+    localStorage.removeItem("cookiesAccepted"); //This is to test it works, remove once it is working.
+    showCookiePopup();
+};
+    </script>
     <script src="navigation.js"></script>
     <script src="//code.tidio.co/nolgj3oldaze0wiutufx2xntzrphsplj.js" async></script>
 
-    <span id="cookie-popup">
-    <p>This website uses cookies to ensure you get the best experience on our website.</p>
-    <button onclick="acceptCookies()">Accept</button>
-  </span>
-
-  <script>
-    function showCookiePopup() {
-      const popup = document.getElementById("cookie-popup");
-      if (!localStorage.getItem("cookiesAccepted")) {
-        popup.classList.add("show");
-      }
-    }
-
-    function acceptCookies() {
-      localStorage.setItem("cookiesAccepted", "true");
-      document.getElementById("cookie-popup").classList.remove("show");
-    }
-
-    window.onload = showCookiePopup;
-  </script>
+    
 </body>
 </html>

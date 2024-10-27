@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 1em; /* Use relative units */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em; /
 }
 
 /* Header Styles */
@@ -21,6 +21,7 @@ header {
     top: 0;
     z-index: 1000;
     padding: 1em 2em;
+    text-transform: uppercase;
 }
 
 /* Navigation Styles */
@@ -28,10 +29,9 @@ nav {
     display: flex;
     background-color: #2F2F2F;
     position: sticky;
-    top: 3.75em; /* Relative units used */
+    top: 3.75em;
     z-index: 999;
     margin: 0;
-    padding: 0;
 }
 
 /* Main Content Styles */
@@ -40,7 +40,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #f4f4f4;
-    padding: 1.25em; /* Relative units */
+    padding: 1.25em; 
 }
 
 .container {
@@ -61,6 +61,9 @@ main article {
     border-radius: 0.3125em;
     background-color: #f9f9f9;
     border-width: 0.0625em;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
 }
 .section {
     margin-bottom: 3.25em;
@@ -69,6 +72,7 @@ main article {
 .heading {
     font-size: 1.5em;
     margin-bottom: 0.9em;
+    text-indent: 1em;
 }
 
 .intro-text {
@@ -112,6 +116,7 @@ button {
     border-radius: 0.3125em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-width: 0.0625em;
 }
 
 button:hover {
@@ -179,7 +184,7 @@ header aside.title {
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: #000000;
     padding: 0.75em 1em;
     text-decoration: none;
     text-align: left;
@@ -240,29 +245,29 @@ ul.social-links li a:hover {
 
 /* Form styles */
 form {
-    max-width: 500px;
+    max-width: 31.25em;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.25em;
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 0.0625 solid #ccc;
+    border-radius: 0.5em;
 }
 
 label {
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125em;
     color: #333;
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.5em;
+    margin-bottom: 0.9375em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 /* Placeholder color */
@@ -309,6 +314,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1.25em;
+    border-color: #ddd;
+    border-style: solid;
 }
 
 table th, table td {
@@ -346,6 +353,18 @@ table tr:hover {
     padding: 0;
 }
 
+p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0F5AC8;
+}
+
+a:active {
+    color: #1874CD;
+}
 @media (min-width: 48em) and (max-width: 119.9375em) {
     body {
         font-size: 1em;
@@ -358,6 +377,7 @@ table tr:hover {
     }
     .container {
         max-width: 45em;
+        display: flex;
     }
     button {
         font-size: 0.875em;
@@ -388,6 +408,7 @@ table tr:hover {
     .container {
         padding: 1em;
         max-width: 90%;
+        display: flex;
     }
 }
 
@@ -397,6 +418,7 @@ table tr:hover {
     }
     .container {
         padding: 0.75em;
+        display: flex;
     }
 }
 
@@ -405,7 +427,7 @@ table tr:hover {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
+    background-color: #2f2f2f;
     color: #fff;
     padding: 15px;
     border-radius: 5px;
@@ -417,6 +439,7 @@ table tr:hover {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
   }
   
   #cookie-popup.show {
@@ -427,17 +450,17 @@ table tr:hover {
   #cookie-popup p {
     margin: 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875em;
   }
   
   #cookie-popup button {
     background-color: #0F5AC8;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
+    padding: 0.5em 1em;
+    border-radius: 0.3125em;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875em;
   }
   
   #cookie-popup button:hover {
