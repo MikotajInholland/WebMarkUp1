@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TheBuildHub</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logo.png" type="image/png">
-    <meta name="description" content="Contact TheBuildHub for any inquiries or support.">
-    <meta name="keywords" content="Contact, TheBuildHub, Support, Inquiries">
-    <meta name="author" content="Your Name">
+    <meta name="description" content="TheBuildHub: The ultimate guide for beginners to the PC Building world! With easy to understand explanations of components, comparisons and troubleshooting!">
+    <meta name="keywords" content="PC building, custom computer, computer components, PC troubleshooting, assembly guide">
+    <meta name="author" content="TheBuildHub Team">
+    <title>Welcome to TheBuildHub</title>
+    <link rel="icon" href="img/logo.png" type="image/png" title="This is also the logo of the website.">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     
 </head>
 <body>
     <header>
-        <img class="logo" src="img/logo.png" alt="TheBuildHub Logo" title="TheBuildHub">
+        <img class="logo" src="img/logo.png" alt="This is a logo">
         <aside class="title">TheBuildHub</aside>
         <nav class="main-nav">
             <button class="home-button">Home</button>
+    
             <span class="dropdown">
                 <button>Essential Components ▼</button>
                 <ul class="dropdown-content">
@@ -29,29 +30,43 @@
                     <a href="essential-components.html#case">Computer Case</a>
                 </ul>
             </span>
-            <button>Comparing Components</button>
+    
+
+                <button>Comparing Components</button>
+               
+    
             <span class="dropdown">
                 <button>Assembling the Computer ▼</button>
                 <ul class="dropdown-content">
-                    <a href="#">Step 1: Case</a>
-                    <a href="#">Step 2: CPU</a>
-                    <a href="#">Step 3: GPU</a>
-                    <a href="#">Step 4: Cabling</a>
+                    <a href="assembling-computer.html#step1">Step 1: Clean Workspace</a>
+                    <a href="assembling-computer.html#step2">Step 2: Install CPU</a>
+                    <a href="assembling-computer.html#step3">Step 3: Install CPU Cooler</a>
+                    <a href="assembling-computer.html#step4">Step 4: Install RAM</a>
+                    <a href="assembling-computer.html#step5">Step 5: Install motherboard</a>
+                    <a href="assembling-computer.html#step6">Step 6: Install PSU</a>
+                    <a href="assembling-computer.html#step7">Step 7: Install Storage</a>
+                    <a href="assembling-computer.html#step8">Step 8: Install GPU</a>
+                    <a href="assembling-computer.html#step9">Step 9: Front Panel Connectors</a>
+                    <a href="assembling-computer.html#step10">Step 10: Test Boot</a>
+                    <a href="assembling-computer.html#step11">Step 11: Installing OS</a>
+                    <a href="assembling-computer.html#step12">Step 12: Cable Management</a>
                 </ul>
             </span>
+    
             <span class="dropdown">
                 <button>Troubleshooting ▼</button>
                 <ul class="dropdown-content">
-                    <li><a href="#">Common Errors</a></li>
-                    <li><a href="#">BIOS Issues</a></li>
-                    <li><a href="#">Boot Failures</a></li>
-                    <li><a href="#">No Display</a></li>
+                    <a href="troubleshooting.html#common-errors">Common Errors</a>
+                    <a href="troubleshooting.html#bios-issues">BIOS Issues</a>
+                    <a href="troubleshooting.html#boot-failures">Boot Failures</a>
+                    <a href="troubleshooting.html#no-display">No Display</a>
                 </ul>
             </span>
-
-                <button>Contact and FAQs</button>
-
+    
+                <button>Contact</button>
+                
         </nav>
+    
     </header>
     <main>
         <p>
@@ -65,6 +80,9 @@
     <p><span class="required">*</span> Fields marked with a star are mandatory.</p>
 
     <form onsubmit="return confirmSubmission()">
+        <fieldset>
+            <legend>Contact Form</legend>
+
 
         
         <label for="salutation">Salutation <span class="required">*</span></label>
@@ -88,6 +106,7 @@
         <textarea id="question" placeholder="e.g. What is your return policy?" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)" required></textarea>
 
         <button type="submit">Submit</button>
+        </fieldset>
     </form>
     </main>
     <footer class="footer">

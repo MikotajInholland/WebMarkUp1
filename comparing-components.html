@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparing Components</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <meta name="description" content="TheBuildHub: The ultimate guide for beginners to the PC Building world! With easy to understand explanations of components, comparisons and troubleshooting!">
+    <meta name="keywords" content="PC building, custom computer, computer components, PC troubleshooting, assembly guide">
+    <meta name="author" content="TheBuildHub Team">
+    <title>Welcome to TheBuildHub</title>
+    <link rel="icon" href="img/logo.png" type="image/png" title="This is also the logo of the website.">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <header>
@@ -26,29 +29,41 @@
                     <a href="essential-components.html#case">Computer Case</a>
                 </ul>
             </span>
+    
+
                 <button>Comparing Components</button>
+               
     
             <span class="dropdown">
                 <button>Assembling the Computer ▼</button>
                 <ul class="dropdown-content">
-                    <a href="#">Step 1: Case</a>
-                    <a href="#">Step 2: CPU</a>
-                    <a href="#">Step 3: GPU</a>
-                    <a href="#">Step 4: Cabling</a>
+                    <a href="assembling-computer.html#step1">Step 1: Clean Workspace</a>
+                    <a href="assembling-computer.html#step2">Step 2: Install CPU</a>
+                    <a href="assembling-computer.html#step3">Step 3: Install CPU Cooler</a>
+                    <a href="assembling-computer.html#step4">Step 4: Install RAM</a>
+                    <a href="assembling-computer.html#step5">Step 5: Install motherboard</a>
+                    <a href="assembling-computer.html#step6">Step 6: Install PSU</a>
+                    <a href="assembling-computer.html#step7">Step 7: Install Storage</a>
+                    <a href="assembling-computer.html#step8">Step 8: Install GPU</a>
+                    <a href="assembling-computer.html#step9">Step 9: Front Panel Connectors</a>
+                    <a href="assembling-computer.html#step10">Step 10: Test Boot</a>
+                    <a href="assembling-computer.html#step11">Step 11: Installing OS</a>
+                    <a href="assembling-computer.html#step12">Step 12: Cable Management</a>
                 </ul>
             </span>
     
             <span class="dropdown">
                 <button>Troubleshooting ▼</button>
                 <ul class="dropdown-content">
-                    <a href="#">Common Errors</a>
-                    <a href="#">BIOS Issues</a>
-                    <a href="#">Boot Failures</a>
-                    <a href="#">No Display</a>
+                    <a href="troubleshooting.html#common-errors">Common Errors</a>
+                    <a href="troubleshooting.html#bios-issues">BIOS Issues</a>
+                    <a href="troubleshooting.html#boot-failures">Boot Failures</a>
+                    <a href="troubleshooting.html#no-display">No Display</a>
                 </ul>
             </span>
     
-                <button>Contact and FAQs</button>
+                <button>Contact</button>
+                
         </nav>
     
     </header>
@@ -130,63 +145,54 @@
     { name: 'Crucial Ballistix 16GB (2 x 8GB)', type: 'RAM', price: '$80', performance: 'Good', rating: '4.6/5', pcpartpickerLink: 'https://pcpartpicker.com/product/BxTzK8/crucial-ballistix-16-gb-2-x-8-gb-ddr4-3200-memory-bl2k8g32c16u4b' },
     { name: 'Kingston A2000 500GB NVMe SSD', type: 'Storage', price: '$60', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/RykgXL/kingston-a2000-500-gb-m2-2280-nvme-solid-state-drive-sa2000m8500g' },
     { name: 'Seagate Barracuda 2TB HDD', type: 'Storage', price: '$60', performance: 'Good', rating: '4.4/5', pcpartpickerLink: 'https://pcpartpicker.com/product/mwrYcf/seagate-barracuda-computer-2-tb-35-7200rpm-internal-hard-drive-st2000dm008' },
-    
+    { name: 'AMD Ryzen 9 5950X', type: 'CPU', price: '$750', performance: 'Extreme', rating: '4.9/5', pcpartpickerLink: 'https://pcpartpicker.com/product/F2PzK8/amd-ryzen-9-5950x-34-ghz-16-core-processor-100-100000059wof' },
+    { name: 'Intel Core i7-11700K', type: 'CPU', price: '$400', performance: 'High', rating: '4.6/5', pcpartpickerLink: 'https://pcpartpicker.com/product/T2YLrH/intel-core-i7-11700k-36-ghz-8-core-processor-bx8070811700k' },
+    { name: 'Nvidia GeForce RTX 3060 Ti', type: 'GPU', price: '$600', performance: 'High', rating: '4.7/5', pcpartpickerLink: 'https://pcpartpicker.com/product/xf66Mp/nvidia-geforce-rtx-3060-ti-8-gb-video-card-900-1g142-2520-000' },
+    { name: 'Corsair Vengeance LPX 16GB (2 x 8GB)', type: 'RAM', price: '$80', performance: 'Good', rating: '4.7/5', pcpartpickerLink: 'https://pcpartpicker.com/product/4vzv6h/corsair-vengeance-lpx-16gb-2-x-8gb-ddr4-3200-memory-cmk16gx4m2b3200c16' },
+    { name: 'Crucial P2 500GB NVMe SSD', type: 'Storage', price: '$45', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/BtJtt6/crucial-p2-500gb-m2-2280-nvme-solid-state-drive-ct500p2ssd8' },
+    { name: 'ASUS TUF Gaming B550M-PLUS', type: 'Motherboard', price: '$150', performance: 'High', rating: '4.6/5', pcpartpickerLink: 'https://pcpartpicker.com/product/6YjNnQ/asus-tuf-gaming-b550m-plus-wifi-micro-atx-am4-motherboard-tuf-gaming-b550m-plus' },
+    { name: 'Noctua NH-D15', type: 'CPU Cooler', price: '$90', performance: 'Extreme', rating: '4.9/5', pcpartpickerLink: 'https://pcpartpicker.com/product/84MTwP/noctua-nh-d15-chromaxblack-8252-cfm-cpu-cooler-nh-d15-chromaxblack' },
+    { name: 'EVGA 600 W1, 80+ WHITE 600W', type: 'Power Supply', price: '$40', performance: 'Good', rating: '4.5/5', pcpartpickerLink: 'https://pcpartpicker.com/product/4FH48d/evga-600-w1-600-w-80-certified-atx-power-supply-100-w1-0600-k1' },
+   
 
 ];
-// Adding comments to this complicated bit of code so I won't forget how it works for when(not if) it breaks.
 function suggestComponents() {
-    // Retrieve the value entered in the component search input field, converting it to lowercase for case-insensitive matching
     const searchQuery = document.getElementById('componentSearch').value.toLowerCase();
-    
-    // Get the HTML element where suggestions will be displayed
     const suggestionsList = document.getElementById('suggestions');
-    
-    // Clear any previous suggestions from the suggestions list
     suggestionsList.innerHTML = ''; 
     
-    // Only proceed if there is a search query
     if (searchQuery) {
-        // Filter the componentsData array to find components whose names include the search query
         const filteredComponents = componentsData.filter(component =>
             component.name.toLowerCase().includes(searchQuery)
         );
 
-        // For each matching component, create a list item in the suggestions list
         filteredComponents.forEach(component => {
-            const suggestionItem = document.createElement('li'); // Create a new list item element
-            suggestionItem.textContent = component.name;         // Set the text of the list item to the component's name
-            suggestionItem.style.cursor = 'pointer';             // Change cursor to pointer to indicate clickability
+            const suggestionItem = document.createElement('li'); 
+            suggestionItem.textContent = component.name;        
+            suggestionItem.classList.add('suggestion-item'); 
             
-            // When a suggestion is clicked, populate the search input with the selected name and clear suggestions
             suggestionItem.onclick = () => {
                 document.getElementById('componentSearch').value = component.name;
                 suggestionsList.innerHTML = '';
             };
 
-            // Add the suggestion item to the suggestions list
             suggestionsList.appendChild(suggestionItem);
         });
     }
 }
 
 function searchComponent() {
-    // Retrieve the search query entered in the component search input field, in lowercase
     const searchQuery = document.getElementById('componentSearch').value.toLowerCase();
-    
-    // Get the table body where the search result will be displayed and clear any previous results
     const resultsBody = document.getElementById('resultsBody');
     resultsBody.innerHTML = ''; 
 
-    // Find the first component in componentsData that matches the search query
     const matchedComponent = componentsData.find(component =>
         component.name.toLowerCase().includes(searchQuery)
     );
 
-    // If a matching component is found, create a table row displaying its details
     if (matchedComponent) {
-        const row = document.createElement('tr');  // Create a new table row element
+        const row = document.createElement('tr');
 
-        // Create and populate table cells for each property of the matched component
         const nameCell = document.createElement('td');
         nameCell.textContent = matchedComponent.name;
         row.appendChild(nameCell);
@@ -207,29 +213,25 @@ function searchComponent() {
         ratingCell.textContent = matchedComponent.rating;
         row.appendChild(ratingCell);
 
-        // Create a cell with a link to view the component on PCPartPicker
         const linkCell = document.createElement('td');
         const link = document.createElement('a');
         link.href = matchedComponent.pcpartpickerLink;
-        link.target = "_blank";             // Open link in a new tab
-        link.textContent = "View on PCPartPicker"; // Set link text
+        link.target = "_blank";
+        link.textContent = "View on PCPartPicker";
         linkCell.appendChild(link);
         row.appendChild(linkCell);
 
-        // Add the completed row to the results table body
         resultsBody.appendChild(row);
 
     } else {
-        // If no matching component is found, display a "No matching component found" message
         const row = document.createElement('tr');
         const noResultCell = document.createElement('td');
-        noResultCell.colSpan = 6; // Span across all columns
+        noResultCell.colSpan = 6;
         noResultCell.textContent = 'No matching component found.';
         row.appendChild(noResultCell);
         resultsBody.appendChild(row);
     }
 }
-
-    </script>
+</script>
 </body>
 </html>

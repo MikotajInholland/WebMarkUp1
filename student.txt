@@ -1,0 +1,5 @@
+Student name: Mikotaj ignatowski
+Student number: 730282
+Student class: IT1D
+GitHub repository: https://github.com/MikotajInholland/WebMarkUp1
+GitHub pages URL: https://mikotajinholland.github.io/WebMarkUp1/

@@ -1,5 +1,8 @@
-/* General styles for all pages */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* ====================================
+   Global Styles
+==================================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +10,12 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 1em; /
+    font-size: 1em;
 }
 
-/* Header Styles */
+/* ====================================
+   Header Styles
+==================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -24,7 +29,26 @@ header {
     text-transform: uppercase;
 }
 
-/* Navigation Styles */
+.logo {
+    width: 100%;
+    max-width: 3.75em;
+    height: auto;
+    margin-right: 0.625em;
+}
+
+header aside.title {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    color: #D3D3D3;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* ====================================
+   Navigation Styles
+==================================== */
 nav {
     display: flex;
     background-color: #2F2F2F;
@@ -34,108 +58,6 @@ nav {
     margin: 0;
 }
 
-/* Main Content Styles */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4;
-    padding: 1.25em; 
-}
-
-.container {
-    max-width: 50em;
-    margin: 1.25em auto;
-    padding: 1.25em;
-    background-color: #fff;
-    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.2);
-    border-radius: 0.3125em;
-    text-align: center;
-}
-
-main article {
-    width: 100%;
-    margin: 1.25em 0;
-    padding: 1.25em;
-    border: 0.0625em solid #ddd;
-    border-radius: 0.3125em;
-    background-color: #f9f9f9;
-    border-width: 0.0625em;
-    line-height: 1.6;
-    letter-spacing: 0.05em;
-    word-spacing: 0.1em;
-}
-.section {
-    margin-bottom: 3.25em;
-}
-
-.heading {
-    font-size: 1.5em;
-    margin-bottom: 0.9em;
-    text-indent: 1em;
-}
-
-.intro-text {
-    font-weight: bold;
-    margin-bottom: 0.9em;
-}
-
-.content-text {
-    margin-bottom: 1.25em;
-}
-
-.imagecontainer {
-    float: right;
-    width: 250px;
-    margin: 0 0 10px 15px;
-}
-
-.imagecontainer img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; 
-}
-
-.imagecontainer figcaption {
-    text-align: center;
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 5px;
-}
-
-.neededcomponents {
-    margin: 20px;
-}
-
-
-/* Button styles */
-button {
-    padding: 0.625em 1.25em;
-    margin: 0 0.3125em;
-    font-size: 1em;
-    height: 2.5em;
-    background-color: #0F5AC8;
-    color: #DDDDDD;
-    border: none;
-    border-radius: 0.3125em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-width: 0.0625em;
-}
-
-button:hover {
-    background-color: #1874CD;
-}
-
-/* Logo styles */
-.logo {
-    width: 100%;
-    max-width: 3.75em;
-    height: auto;
-    margin-right: 0.625em;
-}
-
-/* Main Navigation */
 .main-nav > * {
     display: flex;
     justify-content: center;
@@ -155,17 +77,16 @@ button:hover {
     margin-right: 1.25em;
 }
 
-header aside.title {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: 0;
-    margin-right: 0;
-    color: #D3D3D3;
-    font-weight: bold;
-    font-size: 2em;
+a:hover {
+    color: #800080;
+}
+.main-menu {
+    margin-right: 1.25em;
 }
 
-/* Dropdown menu */
+/* ====================================
+   Dropdown Menu Styles
+==================================== */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -205,16 +126,117 @@ header aside.title {
     visibility: visible;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* ====================================
+   Main Content Styles
+==================================== */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 1.25em; 
 }
 
-/* Footer styles */
+.container {
+    max-width: 50em;
+    margin: 1.25em auto;
+    padding: 1.25em;
+    background-color: #fff;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.2);
+    border-radius: 0.3125em;
+    text-align: center;
+}
+
+main article {
+    width: 100%;
+    margin: 1.25em 0;
+    padding: 1.25em;
+    border: 0.0625em solid #ddd;
+    border-radius: 0.3125em;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+.headimage{
+    display: flex;
+    width: 25%;
+    height: auto;
+
+}
+
+.neededcomponents{
+    margin-left: 1.25em;
+}
+
+/* ====================================
+   Section and Text Styles
+==================================== */
+.section {
+    margin-bottom: 3.25em;
+}
+
+.heading {
+    font-size: 1.5em;
+    margin-bottom: 0.9em;
+    text-indent: 1em;
+}
+
+.intro-text {
+    font-weight: bold;
+    margin-bottom: 0.9em;
+}
+
+.content-text {
+    margin-bottom: 1.25em;
+}
+
+.imagecontainer {
+    float: right;
+    width: 250px;
+    margin: 0 0 10px 15px;
+}
+
+.imagecontainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; 
+}
+
+.imagecontainer figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* ====================================
+   Button Styles
+==================================== */
+button {
+    padding: 0.625em 1.25em;
+    margin: 0 0.3125em;
+    font-size: 1em;
+    height: 2.5em;
+    background-color: #0F5AC8;
+    color: #DDDDDD;
+    border: none;
+    border-radius: 0.3125em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1874CD;
+}
+
+.suggestion-item {
+    cursor: pointer;
+}
+
+/* ====================================
+   Footer Styles
+==================================== */
 footer.footer {
     background-color: #2F2F2F;
     color: #fff;
@@ -247,13 +269,15 @@ ul.social-links li a:hover {
     text-decoration: underline;
 }
 
-/* Form styles */
+/* ====================================
+   Form Styles
+==================================== */
 form {
     max-width: 31.25em;
     margin: 0 auto;
     padding: 1.25em;
     background-color: #f9f9f9;
-    border: 0.0625 solid #ccc;
+    border: 0.0625em solid #ccc;
     border-radius: 0.5em;
 }
 
@@ -274,15 +298,14 @@ input, select, textarea {
     font-size: 0.875em;
 }
 
-/* Placeholder color */
 input::placeholder, textarea::placeholder {
     color: #888;
 }
+
 .required {
     color: #ff0000;
 }
 
-/* Textarea Specific */
 textarea {
     resize: vertical;
     height: 80px;
@@ -309,11 +332,14 @@ textarea {
     height: 6.25em;
 }
 
-p {
-    margin-top: 0.625em;
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
 }
 
-/* Table styles */
+/* ====================================
+   Table Styles
+==================================== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -341,7 +367,9 @@ table tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Suggestions styles */
+/* ====================================
+   Suggestions Styles
+==================================== */
 #suggestions li {
     padding: 0.625em;
     background-color: #f4f4f4;
@@ -357,11 +385,15 @@ table tr:hover {
     padding: 0;
 }
 
+/* ====================================
+   Text Styles
+==================================== */
 p::first-letter {
     font-size: 1.5em;
     font-weight: bold;
 }
 
+/* Link Styles */
 a:hover {
     color: #0F5AC8;
 }
@@ -369,6 +401,10 @@ a:hover {
 a:active {
     color: #1874CD;
 }
+
+/* ====================================
+   Media Queries
+==================================== */
 @media (min-width: 48em) and (max-width: 119.9375em) {
     body {
         font-size: 1em;
@@ -390,7 +426,6 @@ a:active {
         max-width: 3em;
     }
 }
-
 
 @media (max-width: 47.9375em) {
     body {
@@ -415,8 +450,19 @@ a:active {
     }
 }
 
+@media (max-width: 30em) {
+    body {
+        font-size: 0.875em;
+    }
+    .container {
+        padding: 0.75em;
+        display: flex;
+    }
+}
 
-
+/* ====================================
+   Cookie Popup Styles
+==================================== */
 #cookie-popup {
     position: fixed;
     bottom: 20px;
@@ -435,29 +481,33 @@ a:active {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 9999;
-  }
-  
-  #cookie-popup.show {
+}
+
+#cookie-popup.show {
     opacity: 1;
     visibility: visible;
-  }
-  
-  #cookie-popup p {
+}
+
+#cookie-popup p {
     margin: 0;
     text-align: center;
     font-size: 0.875em;
-  }
-  
-  #cookie-popup button {
-    background-color: #0F5AC8;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 0.3125em;
-    cursor: pointer;
-    font-size: 0.875em;
-  }
-  
-  #cookie-popup button:hover {
+}
+
+
+
+#cookie-popup button:hover {
     background-color: #1874CD;
-  }
+}
+
+/* ====================================
+   Keyframe Animations
+==================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -8,7 +8,7 @@
     <meta name="author" content="TheBuildHub Team">
     <title>Welcome to TheBuildHub</title>
     <link rel="icon" href="img/logo.png" type="image/png" title="This is also the logo of the website.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <header>
@@ -17,43 +17,55 @@
         <nav class="main-nav">
             <button class="home-button">Home</button>
     
-            <span class="dropdown">
-                <button>Essential Components ▼</button>
-                <ul class="dropdown-content">
-                    <a href="essential-components.html#cpu">CPU</a>
-                    <a href="essential-components.html#gpu">GPU</a>
-                    <a href="essential-components.html#ram">RAM</a>
-                    <a href="essential-components.html#motherboard">Motherboard</a>
-                    <a href="essential-components.html#storage">Storage Devices</a>
-                    <a href="essential-components.html#psu">Power Supply Unit</a>
-                    <a href="essential-components.html#case">Computer Case</a>
-                </ul>
-            </span>
-    
-            <button>Comparing Components</button> 
-    
-            <span class="dropdown">
-                <button>Assembling the Computer ▼</button>
-                <ul class="dropdown-content">
-                    <a href="#">Step 1: Case</a>
-                    <a href="#">Step 2: CPU</a>
-                    <a href="#">Step 3: GPU</a>
-                    <a href="#">Step 4: Cabling</a>
-                </ul>
-            </span>
-    
-            <span class="dropdown">
-                <button>Troubleshooting ▼</button>
-                <ul class="dropdown-content">
-                    <a href="#">Common Errors</a>
-                    <a href="#">BIOS Issues</a>
-                    <a href="#">Boot Failures</a>
-                    <a href="#">No Display</a>
-                </ul>
-            </span>
-    
-                <button>Contact and FAQs</button>
+            <ul class="main-menu">
+                <li class="dropdown">
+                    <button>Essential Components ▼</button>
+                    <ul class="dropdown-content">
+                        <li><a href="essential-components.html#cpu">CPU</a></li>
+                        <li><a href="essential-components.html#gpu">GPU</a></li>
+                        <li><a href="essential-components.html#ram">RAM</a></li>
+                        <li><a href="essential-components.html#motherboard">Motherboard</a></li>
+                        <li><a href="essential-components.html#storage">Storage Devices</a></li>
+                        <li><a href="essential-components.html#psu">Power Supply Unit</a></li>
+                        <li><a href="essential-components.html#case">Computer Case</a></li>
+                    </ul>
+                </li>
             
+    
+
+                <li><button>Comparing Components</button></li>
+               
+    
+                <li class="dropdown">
+                    <button>Assembling the Computer ▼</button>
+                    <ul class="dropdown-content">
+                        <li><a href="assembling-computer.html#step1">Step 1: Clean Workspace</a></li>
+                        <li><a href="assembling-computer.html#step2">Step 2: Install CPU</a></li>
+                        <li><a href="assembling-computer.html#step3">Step 3: Install CPU Cooler</a></li>
+                        <li><a href="assembling-computer.html#step4">Step 4: Install RAM</a></li>
+                        <li><a href="assembling-computer.html#step5">Step 5: Install motherboard</a></li>
+                        <li><a href="assembling-computer.html#step6">Step 6: Install PSU</a></li>
+                        <li><a href="assembling-computer.html#step7">Step 7: Install Storage</a></li>
+                        <li><a href="assembling-computer.html#step8">Step 8: Install GPU</a></li>
+                        <li><a href="assembling-computer.html#step9">Step 9: Front Panel Connectors</a></li>
+                        <li><a href="assembling-computer.html#step10">Step 10: Test Boot</a></li>
+                        <li><a href="assembling-computer.html#step11">Step 11: Installing OS</a></li>
+                        <li><a href="assembling-computer.html#step12">Step 12: Cable Management</a></li>
+                    </ul>
+                </li>
+    
+                <li class="dropdown">
+                    <button>Troubleshooting ▼</button>
+                    <ul class="dropdown-content">
+                        <li><a href="troubleshooting.html#common-errors">Common Errors</a></li>
+                        <li><a href="troubleshooting.html#bios-issues">BIOS Issues</a></li>
+                        <li><a href="troubleshooting.html#boot-failures">Boot Failures</a></li>
+                        <li><a href="troubleshooting.html#no-display">No Display</a></li>
+                    </ul>
+                </li>
+    
+                <li><button>Contact</button></li>
+            </ul>
         </nav>
     
     </header>
@@ -62,9 +74,9 @@
     <main class="container">
         <article class="section">
             <h2 class="heading">Welcome to TheBuildHub!</h2>
-            <p class="intro-text">Building computers, the Easy Way</p>
+            <em><p class="intro-text">Building computers, the Easy Way</p></em>
             <p class="content-text">
-                Building your own computer can feel like a daunting task, but with the right guidance, it becomes an exciting and fulfilling experience. Whether you’re new to PC building or have been assembling custom rigs for years, TheBuildHub is your one-stop resource for clear, detailed tutorials. From choosing the right parts to solving technical issues, we’re here to guide you every step of the way.
+                Building your own computer can feel like a daunting task, but with the right guidance, it becomes an exciting and fulfilling experience. Whether you&rsquo;re new to PC building or have been assembling custom rigs for years, TheBuildHub is your one-stop resource for clear, detailed tutorials. From choosing the right parts to solving technical issues, we&rsquo;re here to guide you every step of the way.
             </p>
             <p class="content-text">
                 Why Build Your Own PC?
@@ -84,24 +96,24 @@
             </p>
             <h2 class="heading">Assembling the Computer</h2>
             <p class="content-text">
-                Ready to put it all together? Our step-by-step assembly guide will walk you through the process, from installing the CPU to connecting your cables and securing your case. With our detailed instructions and tips, you’ll feel confident throughout the entire assembly process, no matter your skill level.
+                Ready to put it all together? Our step-by-step assembly guide will walk you through the process, from installing the CPU to connecting your cables and securing your case. With our detailed instructions and tips, you&rsquo;ll feel confident throughout the entire assembly process, no matter your skill level.
             </p>
             <h2 class="heading">Troubleshooting</h2>
             <p class="content-text">
-                If something goes wrong during or after assembly, don’t worry! Our troubleshooting section covers common issues like system errors, hardware recognition problems, and more. We provide solutions to get your PC up and running, so you can avoid frustration and enjoy your custom build as soon as possible.
+                If something goes wrong during or after assembly, don&rsquo;t worry! Our troubleshooting section covers common issues like system errors, hardware recognition problems, and more. We provide solutions to get your PC up and running, so you can avoid frustration and enjoy your custom build as soon as possible.
             </p>
             <h2 class="heading">Contact and FAQs</h2>
             <p class="content-text">
-                Have questions? Visit our FAQ section for answers to the most common queries about PC building, from beginner tips to advanced troubleshooting. If you need further assistance, feel free to reach out to us through our contact page. We’re here to help make your PC building journey as smooth as possible.
+                Have questions? Visit our FAQ section for answers to the most common queries about PC building, from beginner tips to advanced troubleshooting. If you need further assistance, feel free to reach out to us through our contact page. W&rsquo;’re here to help make your PC building journey as smooth as possible.
             </p>
         </article>
     
         <article class="section">
             <h2 class="heading">Ready to Build?</h2>
             <p class="content-text">
-                At TheBuildHub, we’re passionate about helping you create the perfect PC, no matter your experience level. Dive into our guides, compare parts, and follow our expert advice to build a machine that meets your needs and exceeds your expectations.
+                At TheBuildHub, we&rsquo;re passionate about helping you create the perfect PC, no matter your experience level. Dive into our guides, compare parts, and follow our expert advice to build a machine that meets your needs and exceeds your expectations.
             </p>
-            <p class="content-text">Let’s get started—your custom PC is just a few steps away!</p>
+            <p class="content-text">Let&rsquo;s get started—your custom PC is just a few steps away!</p>
         </article>
     </main>
     

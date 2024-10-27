@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TroubleShooting</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <meta name="description" content="TheBuildHub: The ultimate guide for beginners to the PC Building world! With easy to understand explanations of components, comparisons and troubleshooting!">
+    <meta name="keywords" content="PC building, custom computer, computer components, PC troubleshooting, assembly guide">
+    <meta name="author" content="TheBuildHub Team">
+    <title>Welcome to TheBuildHub</title>
+    <link rel="icon" href="img/logo.png" type="image/png" title="This is also the logo of the website.">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     
@@ -27,36 +30,91 @@
                     <a href="essential-components.html#case">Computer Case</a>
                 </ul>
             </span>
-            
-                <button>Comparing Components</button>
+    
 
+                <button>Comparing Components</button>
+               
+    
             <span class="dropdown">
                 <button>Assembling the Computer ▼</button>
                 <ul class="dropdown-content">
-                    <a href="#">Step 1: Case</a>
-                    <a href="#">Step 2: CPU</a>
-                    <a href="#">Step 3: GPU</a>
-                    <a href="#">Step 4: Cabling</a>
+                    <a href="assembling-computer.html#step1">Step 1: Clean Workspace</a>
+                    <a href="assembling-computer.html#step2">Step 2: Install CPU</a>
+                    <a href="assembling-computer.html#step3">Step 3: Install CPU Cooler</a>
+                    <a href="assembling-computer.html#step4">Step 4: Install RAM</a>
+                    <a href="assembling-computer.html#step5">Step 5: Install motherboard</a>
+                    <a href="assembling-computer.html#step6">Step 6: Install PSU</a>
+                    <a href="assembling-computer.html#step7">Step 7: Install Storage</a>
+                    <a href="assembling-computer.html#step8">Step 8: Install GPU</a>
+                    <a href="assembling-computer.html#step9">Step 9: Front Panel Connectors</a>
+                    <a href="assembling-computer.html#step10">Step 10: Test Boot</a>
+                    <a href="assembling-computer.html#step11">Step 11: Installing OS</a>
+                    <a href="assembling-computer.html#step12">Step 12: Cable Management</a>
                 </ul>
             </span>
     
             <span class="dropdown">
                 <button>Troubleshooting ▼</button>
                 <ul class="dropdown-content">
-                    <a href="#">Common Errors</a>
-                    <a href="#">BIOS Issues</a>
-                    <a href="#">Boot Failures</a>
-                    <a href="#">No Display</a>
+                    <a href="troubleshooting.html#common-errors">Common Errors</a>
+                    <a href="troubleshooting.html#bios-issues">BIOS Issues</a>
+                    <a href="troubleshooting.html#boot-failures">Boot Failures</a>
+                    <a href="troubleshooting.html#no-display">No Display</a>
                 </ul>
             </span>
     
-                <button>Contact and FAQs</button>
+                <button>Contact</button>
                 
         </nav>
     
     </header>
     <main>
-        <h1>Troubleshooting</h1>
+        <h1 class="page-title">Troubleshooting Guide</h1>
+
+        <article id="common-errors">
+            <h2 class="heading">Common Errors</h2>
+            <figure class="imagecontainer">
+                <img src="img/pctroubleshoot.png" alt="Image of people repairing a computer" title="Do not  be afeard  to bid  for help or look online!">
+                <figcaption>Don't be afraid to ask for help or look online!</figcaption>
+            </figure>
+            
+            <p class="content-text">
+                Common errors can include unexpected shutdowns, application crashes, or slow performance. These may be due to software conflicts, outdated drivers, or insufficient hardware resources.
+            </p>
+            <p class="content-text">
+                <strong>Solution:</strong> Start by checking for any software updates, uninstalling unnecessary applications, and running a virus scan. Ensure that your drivers are up to date and consider adding more RAM if your system often slows down.
+            </p>
+        </article>
+
+        <article id="bios-issues">
+            <h2 class="heading">BIOS Issues</h2>
+            <p class="content-text">
+                BIOS issues can prevent the system from booting properly. This can be caused by outdated BIOS firmware, incorrect BIOS settings, or hardware compatibility problems.
+            </p>
+            <p class="content-text">
+                <strong>Solution:</strong> Access the BIOS by pressing the appropriate key during startup (usually F2, Delete, or Esc). Ensure all settings match your hardware specifications. If necessary, consider updating your BIOS firmware by downloading the latest version from the manufacturer&rsquo;s website.
+            </p>
+        </article>
+
+        <article id="boot-failures">
+            <h2 class="heading">Boot Failures</h2>
+            <p class="content-text">
+                Boot failures occur when the system cannot locate the operating system or encounters hardware issues during startup, like a bad drive, loose cables, or incorrect boot order in the BIOS.
+            </p>
+            <p class="content-text">
+                <strong>Solution:</strong> Check if all cables are attached correctly. Go into BIOS to ensure that the boot order picks the correct drive. If the problem is still present, then replace the drive with another one hosting a system recovery tool.
+            </p>
+        </article>
+
+        <article id="no-display">
+            <h2 class="heading">No Display</h2>
+            <p class="content-text">
+                The blank screen or no display output might be caused by faulty GPU/RAM, even the connection of a monitor, or a faulty cable. Faulty settings of screen display may also be one of the reasons for such problems.
+            </p>
+            <p class="content-text">
+                <strong>Solution:</strong> First, check that the monitor is plugged in and turned on. The cable should be inserted properly in both the monitor and the GPU. Otherwise, if one is seated on a different GPU, it should be reseated or tested with another display output or different GPU if possible. Testing of the RAM is also needed through reseating or swapping modules.
+            </p>
+        </article>
     </main>
 
     <footer class="footer">

@@ -20,7 +20,7 @@
         case 'Troubleshooting ▼':
           window.location.href = './troubleshooting.html';
           break;
-        case 'Contact and FAQs':
+        case 'Contact':
          window.location.href = './contact.html';
           break;
         default:
