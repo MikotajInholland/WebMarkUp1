@@ -103,6 +103,10 @@ main article {
     margin-top: 5px;
 }
 
+.neededcomponents {
+    margin: 20px;
+}
+
 
 /* Button styles */
 button {
@@ -377,7 +381,6 @@ a:active {
     }
     .container {
         max-width: 45em;
-        display: flex;
     }
     button {
         font-size: 0.875em;
@@ -394,7 +397,7 @@ a:active {
         font-size: 0.9375em;
     }
     header {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
     nav {
@@ -412,15 +415,7 @@ a:active {
     }
 }
 
-@media (max-width: 30em) {
-    body {
-        font-size: 0.875em;
-    }
-    .container {
-        padding: 0.75em;
-        display: flex;
-    }
-}
+
 
 #cookie-popup {
     position: fixed;
